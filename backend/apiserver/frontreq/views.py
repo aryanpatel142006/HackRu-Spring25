@@ -13,5 +13,5 @@ def reverse_string(Request):
     return HttpResponse("Hello from django")
 
 def handle_login(Request):
-    print("Recieved Login Req: " + Request)
+    print("Recieved Login Req: ")
     return HttpResponse('Recieved Login Req')
