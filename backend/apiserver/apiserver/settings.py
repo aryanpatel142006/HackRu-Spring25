@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # The following apps are required by all auth:
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
     'allauth.socialaccount.providers.google', # google provider for auth
 
 ]
