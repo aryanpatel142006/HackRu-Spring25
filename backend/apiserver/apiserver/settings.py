@@ -59,8 +59,12 @@ CORS_ALLOWED_ORIGIN = [
     "http://127.0.0.1:3000" # add this too
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -71,8 +75,6 @@ MIDDLEWARE = [
 
     # Add the account middleware for AllAuth:
     "allauth.account.middleware.AccountMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'apiserver.urls'
