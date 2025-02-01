@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'rest_framework',
     'allauth.socialaccount.providers.google', # google provider for auth
+    "corsheaders"
 ]
 
 REST_FRAMEWORK = {
@@ -52,6 +53,11 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+CORS_ALLOWED_ORIGIN = [
+    "http://localhost:3000",  # Or the origin of your React app
+    "http://127.0.0.1:3000" # add this too
+]
 
 
 MIDDLEWARE = [
@@ -65,6 +71,8 @@ MIDDLEWARE = [
 
     # Add the account middleware for AllAuth:
     "allauth.account.middleware.AccountMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'apiserver.urls'
