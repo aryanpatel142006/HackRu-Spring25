@@ -6,7 +6,12 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status  # Import status codes
 
+
 # Create your views here.
 
 def reverse_string(Request):
     return HttpResponse("Hello from django")
+
+def handle_login(Request):
+    print("Recieved Login Req: " + Request)
+    return HttpResponse('Recieved Login Req')
