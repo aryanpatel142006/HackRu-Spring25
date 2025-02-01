@@ -1,3 +1,5 @@
 Django
 django-allauth
+djangorestframework
+django-cors-headers
 "django-allauth[socialaccount]"
