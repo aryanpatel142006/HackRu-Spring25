@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount.providers.google', # google provider for auth
-
 ]
 
 MIDDLEWARE = [
